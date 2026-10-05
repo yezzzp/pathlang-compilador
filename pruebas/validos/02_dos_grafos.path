@@ -1,0 +1,21 @@
+// Dos redes y dos heurísticas; búsqueda sin regla ni hora
+grafo Lima {
+    nodo A (-12.046, -77.042);
+    nodo B (-12.050, -77.030);
+    arista A <-> B : 1.5 km;
+}
+grafo Cusco dirigido {
+    nodo Plaza (-13.516, -71.978);
+    nodo Sacsayhuaman (-13.509, -71.981);
+    arista Plaza -> Sacsayhuaman : 20 min tipo subida;
+}
+heuristica Cero(n, meta) {
+    retornar 0;
+}
+heuristica Recta(n, meta) {
+    retornar distancia(n, meta) / 40.0;
+}
+buscar ruta r1 desde A hasta B en Lima usando Cero;
+buscar ruta r2 desde Plaza hasta Sacsayhuaman en Cusco usando Recta a las 09:00;
+mostrar r1;
+mostrar r2;

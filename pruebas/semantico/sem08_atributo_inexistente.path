@@ -1,0 +1,8 @@
+grafo Lima {
+    nodo A (0, 0);
+}
+regla R {
+    para cada arista e de Lima {
+        e.velocidad := 2;
+    }
+}

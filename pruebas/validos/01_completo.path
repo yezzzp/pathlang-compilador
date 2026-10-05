@@ -1,0 +1,29 @@
+grafo Lima dirigido {
+    nodo A (-12.046, -77.042);
+    nodo B (-12.050, -77.030);
+    nodo C (-12.044, -77.035);
+    nodo D (-12.060, -77.020);
+
+    arista A -> B : 4 min tipo avenida;
+    arista A -> C : 2 min;
+    arista C -> B : 1 min;
+    arista B -> D : 5 min tipo avenida;
+    arista C -> D : 8 min;
+}
+
+heuristica Recta(n, meta) {
+    retornar distancia(n, meta) / 40.0;
+}
+
+regla HoraPunta {
+    si hora entre 17:00 y 20:00 entonces {
+        para cada arista e de Lima {
+            si e.tipo == avenida entonces {
+                e.peso := e.peso * 2.0;
+            }
+        }
+    }
+}
+
+buscar ruta r desde A hasta D en Lima usando Recta con HoraPunta a las 18:30;
+mostrar r;

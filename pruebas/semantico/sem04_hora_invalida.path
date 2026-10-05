@@ -1,0 +1,3 @@
+regla Noche {
+    si hora entre 25:00 y 06:00 entonces { }
+}

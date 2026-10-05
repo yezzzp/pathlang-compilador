@@ -1,0 +1,24 @@
+// Regla con selectiva doble e iterativas sobre aristas y nodos
+grafo Lima dirigido {
+    nodo A (-12.046, -77.042);
+    nodo B (-12.050, -77.030);
+    arista A -> B : 4 min tipo avenida;
+}
+regla Noche {
+    si hora entre 22:00 y 23:59 entonces {
+        para cada arista e de Lima {
+            e.peso := e.peso * 0.8;
+        }
+    } sino {
+        para cada arista e de Lima {
+            si e.tipo == avenida entonces {
+                e.peso := (e.peso + 1) * 1.5;
+            }
+        }
+    }
+}
+heuristica Manhattan(n, meta) {
+    retornar abs(n.lat - meta.lat) + abs(n.lon - meta.lon);
+}
+buscar ruta r desde A hasta B en Lima usando Manhattan con Noche a las 22:30;
+mostrar r;

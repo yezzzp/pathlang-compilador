@@ -1,0 +1,4 @@
+grafo G { nodo A (0, 0); nodo B (1, 1); arista A -> B : 1 min; }
+heuristica H(n, meta) { retornar 0; }
+buscar ruta r desde A hasta B en G usando H;
+mostrar r;

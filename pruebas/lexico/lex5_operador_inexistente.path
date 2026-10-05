@@ -1,0 +1,8 @@
+grafo Lima {
+    nodo A (0, 0);
+}
+regla Doble {
+    para cada arista e de Lima {
+        e.peso := e.peso ^ 2;
+    }
+}

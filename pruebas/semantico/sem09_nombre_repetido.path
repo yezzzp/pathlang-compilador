@@ -1,0 +1,5 @@
+grafo Lima {
+    nodo A (0, 0);
+    nodo B (1, 1);
+}
+heuristica Lima(n, meta) { retornar 0; }

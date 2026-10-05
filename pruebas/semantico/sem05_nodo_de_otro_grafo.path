@@ -1,0 +1,9 @@
+grafo Lima {
+    nodo A (0, 0);
+    nodo B (1, 1);
+}
+grafo Cusco {
+    nodo X (2, 2);
+}
+heuristica Cero(n, meta) { retornar 0; }
+buscar ruta r desde A hasta X en Lima usando Cero;

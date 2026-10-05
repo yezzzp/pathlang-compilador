@@ -1,0 +1,4 @@
+regla R {
+    si hora entre 17:00 y 20:00 entonces
+        e.peso := 1;
+}

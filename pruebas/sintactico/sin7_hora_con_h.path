@@ -1,0 +1,3 @@
+regla R {
+    si hora entre 17h00 y 20:00 entonces { }
+}
